@@ -198,26 +198,28 @@
         id="trackGame"
         @change="addNewGameToPlanner('daily', $event)"
       >
+        <option value=""></option>
         <option
-          v-for="(newGame, index) of gamesList"
-          :key="index"
-          :disabled="data.daily[newGame.key]"
-          :value="newGame.key"
+        v-for="(newGame, index) of gamesList"
+        :key="index"
+        :disabled="data.daily[newGame.key]"
+        :value="newGame.key"
         >
-          {{ newGame.title }}
-        </option>
-      </select>
-    </div>
-
-    <div class="mt-10">
-      <h3 class="text-xl font-bold">Untrack game</h3>
-
-      <select
-        class="select"
-        name="untrackGame"
-        id="untrackGame"
-        @change="deleteGameFromPlanner($event)"
-      >
+        {{ newGame.title }}
+      </option>
+    </select>
+  </div>
+  
+  <div class="mt-10">
+    <h3 class="text-xl font-bold">Untrack game</h3>
+    
+    <select
+    class="select"
+    name="untrackGame"
+    id="untrackGame"
+    @change="deleteGameFromPlanner($event)"
+    >
+        <option value=""></option>
         <option
           v-for="(newGame, index) of gamesList"
           :key="index"
@@ -420,11 +422,16 @@ const updateTaskState = (key, index, area, event) => {
 const addNewGameToPlanner = (area, event) => {
   let gameKey = event.target.value;
   let gameTitle = '';
+
+  
+
   gamesList.forEach((game) => {
     if (game.key == gameKey) {
       gameTitle = game.title;
     }
   });
+
+  if (gameTitle == '' || gameTitle == undefined || !gameTitle ) return;
 
   // if the game doesn't exist in the planner, add it
   if (!data.value.daily[gameKey]) {
@@ -439,7 +446,7 @@ const addNewGameToPlanner = (area, event) => {
 
 const deleteGameFromPlanner = (event) => {
   let gameKey = event.target.value;
-  if (!gameKey) return;
+  if (gameKey == '' || gameKey == undefined || !gameKey ) return;
 
   delete data.value.daily[gameKey];
   delete data.value.weekly[gameKey];
