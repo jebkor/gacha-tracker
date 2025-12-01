@@ -243,64 +243,57 @@ const data = ref({
   daily: {
     genshin: {
       title: 'Genshin',
-      items: [
-        { name: 'Commissions', state: true },
-        { name: 'Artifacts', state: false },
-        { name: 'Talent books', state: false },
-      ],
+      items: [],
     },
     zzz: {
       title: 'Zenless Zone Zero',
-      items: [{ name: 'Commissions', state: true }],
+      items: [],
     },
     'wuthering-waves': {
       title: 'Wuthering Waves',
-      items: [{ name: 'Commissions', state: false }],
+      items: [],
     },
   },
   weekly: {
     genshin: {
       title: 'Genshin',
-      items: [
-        { name: 'Weekly Bosses', state: false },
-        { name: 'Domains', state: true },
-      ],
+      items: [],
     },
     zzz: {
       title: 'Zenless Zone Zero',
-      items: [{ name: 'Notorious Hunts', state: true }],
+      items: [],
     },
     'wuthering-waves': {
       title: 'Wuthering Waves',
-      items: [{ name: 'Weekly Bosses', state: true }],
+      items: [],
     },
   },
   monthly: {
     genshin: {
       title: 'Genshin',
-      items: [{ name: 'Monthly Bosses', state: false }],
+      items: [],
     },
     zzz: {
       title: 'Zenless Zone Zero',
-      items: [{ name: 'Monthly Bosses', state: true }],
+      items: [],
     },
     'wuthering-waves': {
       title: 'Wuthering Waves',
-      items: [{ name: 'Monthly Bosses', state: false }],
+      items: [],
     },
   },
   todo: {
     genshin: {
       title: 'Genshin',
-      items: [{ name: 'Spiral Abyss', state: false }],
+      items: [],
     },
     zzz: {
       title: 'Zenless Zone Zero',
-      items: [{ name: 'Hollow Zero', state: true }],
+      items: [],
     },
     'wuthering-waves': {
       title: 'Wuthering Waves',
-      items: [{ name: 'Tower of something', state: false }],
+      items: [],
     },
   },
 });
