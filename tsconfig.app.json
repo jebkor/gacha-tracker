@@ -1,0 +1,28 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    // "src/**/__tests__/*"
+  ],
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "target": "es6",
+    "lib": [
+      "ESNext.Array",
+      "es2016",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
